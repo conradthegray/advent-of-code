@@ -1,3 +1,4 @@
+import { assert } from "node:console";
 import { readFile } from "node:fs/promises";
 import * as path from "node:path";
 
@@ -26,6 +27,7 @@ const result = leftListSorted
   .reduce((acc, prev) => acc + prev, 0);
 
 console.log(`Total distance between lists: ${result}`);
+assert(result === 2264607, "Incorrect answer for part 1");
 
 const rightListOccurences: Record<number, number> = {};
 
@@ -48,3 +50,4 @@ const similarityScore = leftList
   .reduce((acc, prev) => acc + prev, 0);
 
 console.log(`Similarity score: ${similarityScore}`);
+assert(similarityScore === 19457120, "Incorrect answer for part 1");

@@ -1,3 +1,4 @@
+import { assert } from "node:console";
 import { readFile } from "node:fs/promises";
 import * as path from "node:path";
 
@@ -24,6 +25,7 @@ const result = reports
   .reduce((acc, curr) => acc + Number(curr), 0);
 
 console.log(`Number of safe reports: ${result}`);
+assert(result === 379, "Incorrect answer for part 1");
 
 const safeWithDampener = reports
   .map((report) => {
@@ -36,3 +38,4 @@ const safeWithDampener = reports
   .reduce((acc, curr) => acc + Number(curr), 0);
 
 console.log(`Number of safe reports with dampener: ${safeWithDampener}`);
+assert(safeWithDampener === 430, "Incorrect answer for part 2");
