@@ -167,3 +167,6 @@ junit.xml
 # Jupyter files
 .ipynb_checkpoints/
 Untitled*.ipynb
+
+# AoC files
+input.txt
