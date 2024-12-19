@@ -43,9 +43,14 @@ const possibleDesigns = designs
   .filter((n) => n > 0);
 
 console.log(`Answer for part 1: ${possibleDesigns.length}`);
+assert(possibleDesigns.length === 327, "Incorrect answer for part 1");
 
 const numberOfPossibleDesigns = designs
   .map((design) => calculatePatternPermutations(design, patterns))
   .reduce((acc, curr) => acc + curr, 0);
 
 console.log(`Answer for part 2: ${numberOfPossibleDesigns}`);
+assert(
+  numberOfPossibleDesigns === 772696486795255,
+  "Incorrect answer for part 2"
+);
